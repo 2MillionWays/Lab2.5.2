@@ -3,9 +3,11 @@ package ross.goncharuk;
 import java.util.Arrays;
 
 public class MyInit {
+
     /*in 2.5.3 changing the field "arr" to static won't change the result as
     arr will be initialized at non-static block, yet Intellij Idea will suggest changing non-static block to static*/
     private static int [] arr;
+
     /*in 2.5.4 changing initialization block to static won't change the result as
     static block will be initialized right after declaring int[] arr*/
     static {
@@ -16,13 +18,5 @@ public class MyInit {
     }
     public void printArray(){
         System.out.println(Arrays.toString(arr));
-    }
-    public static void main(String[] args) {
-
-        MyInit arrOne = new MyInit();
-        MyInit arrTwo = new MyInit();
-
-        arrOne.printArray();
-        arrTwo.printArray();
     }
 }
