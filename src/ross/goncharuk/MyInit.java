@@ -13,7 +13,7 @@ public class MyInit {
     static {
         arr = new int[10];
         for(int i = 0;i<=9;i++){
-            arr[i]=(int) (10 * Math.random());
+            arr[i]=(int) (100 * Math.random());
         }
     }
     public void printArray(){
